@@ -9,13 +9,13 @@ use App\Http\Controllers\WelcomeController;
 // });
 
 // ! second way : pass name through the controller class to the view
-// Route::get('/', [WelcomeController::class, 'welcome1']);
+// Route::get('/', [WelcomeController::class, 'welcome']);
 
 // ======================== //
 // ! Note: we can it more dynamic by pass name through the route it self
 // * This is the most reliable solution
-Route::get('/{name?}', function ($name = 'Hasan') {
-    return view('welcome', ['name' => $name]);
-});
+// Route::get('/{name?}', function ($name = 'Hasan') {
+//     return view('welcome', ['name' => $name]);
+// });
 
-Route::get('/{name?}', [WelcomeController::class, 'welcome2']);
+Route::get('/{name?}', [WelcomeController::class, 'welcome']);
